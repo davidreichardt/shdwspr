@@ -5,11 +5,6 @@ const { getAvatarUrl } = require('../utils/discord');
 const router = express.Router();
 const prisma = new PrismaClient();
 
-// TODO: remove test after implementing real homepage and dashboard
-router.get('/test', (req, res) => {
-  res.json({ message: 'You are authenticated and can access this route.' });
-});
-
 // route to create a new user in db
 // expect json body with username and discordId
 router.post('/', express.json(), async (req, res) => {

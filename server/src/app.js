@@ -33,13 +33,13 @@ const authRouter = require('./routes/auth');
 app.use('/users', isAuthenticated, usersRouter);
 app.use('/auth', authRouter);
 
-// TODO: remove test after implementing real homepage and dashboard
 app.get('/', (req, res) => {
-  if (req.isAuthenticated && req.isAuthenticated()) {
-    res.send('Welcome to SHDWSPR. You are logged in.');
-  } else {
-    res.send('Welcome to SHDWSPR. Please log in.');
-  }
+  console.log('User authenticated:', req.isAuthenticated && req.isAuthenticated());
+  res.send(
+    req.isAuthenticated && req.isAuthenticated()
+      ? 'Welcome to SHDWSPR. You are logged in.'
+      : 'Welcome to SHDWSPR. Please log in.'
+  );
 });
 
 module.exports = app;
