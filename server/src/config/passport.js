@@ -26,10 +26,18 @@
                 user = await prisma.user.create({
                   data: {
                     discordId: profile.id,
-                    email: profile.email,
                     username: profile.username,
+                    avatar: profile.avatar,
                   },
                 });
+              } else {
+                // optionally update avatar on login if changed
+                if (user.avatar !== profile.avatar) {
+                  user = await prisma.user.update({
+                    where: { discordId: profile.id },
+                    data: { avatar: profile.avatar },
+                  });
+                }
               }
 
               // login success, pass user to session

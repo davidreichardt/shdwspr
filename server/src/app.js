@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const setupPassport = require('./config/passport');
+const isAuthenticated = require('./middleware/isAuthenticated');
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }, //change to true when https
+    cookie: { secure: false, sameSite: 'lax' }, //change to true when https
   })
 );
 
@@ -29,7 +30,16 @@ app.use(passport.session());
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 
-app.use('/users', usersRouter);
+app.use('/users', isAuthenticated, usersRouter);
 app.use('/auth', authRouter);
+
+// TODO: remove test after implementing real homepage and dashboard
+app.get('/', (req, res) => {
+  if (req.isAuthenticated && req.isAuthenticated()) {
+    res.send('Welcome to SHDWSPR. You are logged in.');
+  } else {
+    res.send('Welcome to SHDWSPR. Please log in.');
+  }
+});
 
 module.exports = app;
