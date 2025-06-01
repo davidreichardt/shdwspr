@@ -1,6 +1,20 @@
 {
+  "name": "shadow-spear-initiative",
+  "version": "1.0.0",
+  "description": "Shadow Spear Initiative website",
+  "author": "David R.",
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "prisma": "prisma"
+  },
   "dependencies": {
-    "express": "^5.1.0",
+    "@prisma/client": "^6.8.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
     "prisma": "^6.8.2"
   }
 }
