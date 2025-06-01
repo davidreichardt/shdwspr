@@ -8,10 +8,24 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Rank {
+  RECRUIT
+  STRIKER
+  SENTINEL
+  VANGUARD
+  WARDEN
+  PARAGON
+}
+
 model User {
-  id        Int      @id @default(autoincrement())
-  username  String?  @unique
-  discordId String   @unique
-  avatar    String?
-  createdAt DateTime @default(now())
+  id            Int      @id @default(autoincrement())
+  rsiHandle     String?  @unique
+  discordId     String   @unique
+  discordHandle String   @unique
+  preferredName String?
+  rank          Rank     @default(RECRUIT)
+  avatar        String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
 }
