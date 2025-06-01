@@ -29,9 +29,11 @@ app.use(passport.session());
 // import and mount routes
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
+const dashboardRouter = require('./routes/dashboard');
 
 app.use('/users', isAuthenticated, usersRouter);
 app.use('/auth', authRouter);
+app.use('/dashboard', isAuthenticated, dashboardRouter);
 
 app.get('/', (req, res) => {
   console.log('User authenticated:', req.isAuthenticated && req.isAuthenticated());
