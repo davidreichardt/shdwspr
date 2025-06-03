@@ -1,0 +1,1383 @@
+[
+  {
+    "name": "100i",
+    "size": "Small",
+    "role": [
+      "Starter",
+      "Touring"
+    ],
+    "manufacturer": "Origin",
+    "scu": 2
+  },
+  {
+    "name": "125a",
+    "size": "Small",
+    "role": [
+      "Starter",
+      "Light Fighter"
+    ],
+    "manufacturer": "Origin",
+    "scu": 2
+  },
+  {
+    "name": "135c",
+    "size": "Small",
+    "role": [
+      "Starter",
+      "Light Freight"
+    ],
+    "manufacturer": "Origin",
+    "scu": 6
+  },
+  {
+    "name": "300i",
+    "size": "Small",
+    "role": [
+      "Touring"
+    ],
+    "manufacturer": "Origin",
+    "scu": 8
+  },
+  {
+    "name": "315p",
+    "size": "Small",
+    "role": [
+      "Pathfinder"
+    ],
+    "manufacturer": "Origin",
+    "scu": 12
+  },
+  {
+    "name": "325a",
+    "size": "Small",
+    "role": [
+      "Interdiction Interception"
+    ],
+    "manufacturer": "Origin",
+    "scu": 4
+  },
+  {
+    "name": "350r",
+    "size": "Small",
+    "role": [
+      "Racing"
+    ],
+    "manufacturer": "Origin",
+    "scu": 4
+  },
+  {
+    "name": "400i",
+    "size": "Large",
+    "role": [
+      "Pathfinder"
+    ],
+    "manufacturer": "Origin",
+    "scu": 42
+  },
+  {
+    "name": "600i Executive-Edition",
+    "size": "Large",
+    "role": [
+      "Expedition"
+    ],
+    "manufacturer": "Origin",
+    "scu": 40
+  },
+  {
+    "name": "600i Explorer",
+    "size": "Large",
+    "role": [
+      "Expedition"
+    ],
+    "manufacturer": "Origin",
+    "scu": 40
+  },
+  {
+    "name": "600i Touring",
+    "size": "Large",
+    "role": [
+      "Touring"
+    ],
+    "manufacturer": "Origin",
+    "scu": 16
+  },
+  {
+    "name": "85X",
+    "size": "Small",
+    "role": [
+      "Touring"
+    ],
+    "manufacturer": "Origin",
+    "scu": 0
+  },
+  {
+    "name": "890 Jump",
+    "size": "Capital",
+    "role": [
+      "Touring"
+    ],
+    "manufacturer": "Origin",
+    "scu": 484
+  },
+  {
+    "name": "A2 Hercules Starlifter",
+    "size": "Large",
+    "role": [
+      "Transport Gunship"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 216
+  },
+  {
+    "name": "Apollo Medivac",
+    "size": "Large",
+    "role": [
+      "Support - Medical"
+    ],
+    "manufacturer": "RSI",
+    "scu": 28
+  },
+  {
+    "name": "Apollo Triage",
+    "size": "Large",
+    "role": [
+      "Support - Medical"
+    ],
+    "manufacturer": "RSI",
+    "scu": 28
+  },
+  {
+    "name": "Ares Star Fighter Inferno",
+    "size": "Medium",
+    "role": [
+      "Heavy Combat Fighter"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 0
+  },
+  {
+    "name": "Ares Star Fighter Ion",
+    "size": "Medium",
+    "role": [
+      "Heavy Combat Fighter"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 0
+  },
+  {
+    "name": "Arrow",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "Aurora CL",
+    "size": "Small",
+    "role": [
+      "Light Freight"
+    ],
+    "manufacturer": "RSI",
+    "scu": 6
+  },
+  {
+    "name": "Aurora ES",
+    "size": "Small",
+    "role": [
+      "Starter",
+      "Pathfinder"
+    ],
+    "manufacturer": "RSI",
+    "scu": 3
+  },
+  {
+    "name": "Aurora LN",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "RSI",
+    "scu": 3
+  },
+  {
+    "name": "Aurora LX",
+    "size": "Small",
+    "role": [
+      "Pathfinder"
+    ],
+    "manufacturer": "RSI",
+    "scu": 3
+  },
+  {
+    "name": "Aurora MR",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "RSI",
+    "scu": 3
+  },
+  {
+    "name": "Avenger Stalker",
+    "size": "Small",
+    "role": [
+      "Interdiction"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Avenger Titan",
+    "size": "Small",
+    "role": [
+      "Light Freight"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 8
+  },
+  {
+    "name": "Avenger Titan Renegade",
+    "size": "Small",
+    "role": [
+      "Light Freight"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 8
+  },
+  {
+    "name": "Avenger Warlock",
+    "size": "Small",
+    "role": [
+      "Interdiction"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Bengal",
+    "size": "Capital",
+    "role": [
+      "Fleet Carrier"
+    ],
+    "manufacturer": "RSI",
+    "scu": 0
+  },
+  {
+    "name": "Blade",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Esperia",
+    "scu": 0
+  },
+  {
+    "name": "Buccaneer",
+    "size": "Small",
+    "role": [
+      "Interdiction"
+    ],
+    "manufacturer": "Drake",
+    "scu": 0
+  },
+  {
+    "name": "C1 Spirit",
+    "size": "Medium",
+    "role": [
+      "Medium Freight"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 64
+  },
+  {
+    "name": "C2 Hercules Starlifter",
+    "size": "Large",
+    "role": [
+      "Transport"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 696
+  },
+  {
+    "name": "C8R Pisces Rescue",
+    "size": "Small",
+    "role": [
+      "Medical"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "C8X Pisces Expedition",
+    "size": "Small",
+    "role": [
+      "Exploration"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 4
+  },
+  {
+    "name": "Carrack",
+    "size": "Large",
+    "role": [
+      "Expedition"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 456
+  },
+  {
+    "name": "Carrack Expedition",
+    "size": "Large",
+    "role": [
+      "Expedition"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 456
+  },
+  {
+    "name": "Caterpillar",
+    "size": "Large",
+    "role": [
+      "Transport"
+    ],
+    "manufacturer": "Drake",
+    "scu": 576
+  },
+  {
+    "name": "Constellation Andromeda",
+    "size": "Large",
+    "role": [
+      "Medium Freight",
+      "Gunship"
+    ],
+    "manufacturer": "RSI",
+    "scu": 96
+  },
+  {
+    "name": "Constellation Aquila",
+    "size": "Large",
+    "role": [
+      "Expedition"
+    ],
+    "manufacturer": "RSI",
+    "scu": 96
+  },
+  {
+    "name": "Constellation Phoenix",
+    "size": "Large",
+    "role": [
+      "Touring"
+    ],
+    "manufacturer": "RSI",
+    "scu": 96
+  },
+  {
+    "name": "Constellation Taurus",
+    "size": "Large",
+    "role": [
+      "Medium Freight"
+    ],
+    "manufacturer": "RSI",
+    "scu": 174
+  },
+  {
+    "name": "Corsair",
+    "size": "Large",
+    "role": [
+      "Exploration"
+    ],
+    "manufacturer": "Drake",
+    "scu": 72
+  },
+  {
+    "name": "Crucible",
+    "size": "Large",
+    "role": [
+      "Heavy Repair"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 230
+  },
+  {
+    "name": "Cutlass Black",
+    "size": "Medium",
+    "role": [
+      "Medium Fighter",
+      "Medium Freight"
+    ],
+    "manufacturer": "Drake",
+    "scu": 46
+  },
+  {
+    "name": "Cutlass Blue",
+    "size": "Medium",
+    "role": [
+      "Interdiction"
+    ],
+    "manufacturer": "Drake",
+    "scu": 12
+  },
+  {
+    "name": "Cutlass Red",
+    "size": "Medium",
+    "role": [
+      "Medical"
+    ],
+    "manufacturer": "Drake",
+    "scu": 12
+  },
+  {
+    "name": "Cutter",
+    "size": "Small",
+    "role": [
+      "Light Freight"
+    ],
+    "manufacturer": "Drake",
+    "scu": 4
+  },
+  {
+    "name": "Defender",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Banu",
+    "scu": 0
+  },
+  {
+    "name": "Driller",
+    "size": "Capital",
+    "role": [
+      "Escort And Troop Carrier"
+    ],
+    "manufacturer": "Vanduul",
+    "scu": 0
+  },
+  {
+    "name": "Eclipse",
+    "size": "Medium",
+    "role": [
+      "Stealth Bomber"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Endeavor",
+    "size": "Capital",
+    "role": [
+      "Heavy Science"
+    ],
+    "manufacturer": "MISC",
+    "scu": 500
+  },
+  {
+    "name": "Endeavor Discovery",
+    "size": "Capital",
+    "role": [
+      "Heavy Science"
+    ],
+    "manufacturer": "MISC",
+    "scu": 500
+  },
+  {
+    "name": "Endeavor Hope",
+    "size": "Capital",
+    "role": [
+      "Heavy Science"
+    ],
+    "manufacturer": "MISC",
+    "scu": 500
+  },
+  {
+    "name": "Endeavor Olympic",
+    "size": "Capital",
+    "role": [
+      "Heavy Science"
+    ],
+    "manufacturer": "MISC",
+    "scu": 500
+  },
+  {
+    "name": "F7A Hornet",
+    "size": "Small",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F7C Hornet",
+    "size": "Small",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 2
+  },
+  {
+    "name": "F7C Hornet Wildfire",
+    "size": "Small",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F7C-M Super Hornet",
+    "size": "Small",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F7C-M Super Hornet Heartseeker",
+    "size": "Small",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F7C-R Hornet Tracker",
+    "size": "Small",
+    "role": [
+      "Pathfinder"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F7C-S Hornet Ghost",
+    "size": "Small",
+    "role": [
+      "Stealth Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F8A Lightning",
+    "size": "Small",
+    "role": [
+      "Heavy Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F8C Lightning",
+    "size": "Small",
+    "role": [
+      "Heavy Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "F8C Lightning Executive-Edition",
+    "size": "Small",
+    "role": [
+      "Heavy Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "Freelancer",
+    "size": "Medium",
+    "role": [
+      "Medium Freight"
+    ],
+    "manufacturer": "MISC",
+    "scu": 66
+  },
+  {
+    "name": "Freelancer DUR",
+    "size": "Medium",
+    "role": [
+      "Expedition"
+    ],
+    "manufacturer": "MISC",
+    "scu": 36
+  },
+  {
+    "name": "Freelancer MAX",
+    "size": "Medium",
+    "role": [
+      "Medium Freight"
+    ],
+    "manufacturer": "MISC",
+    "scu": 120
+  },
+  {
+    "name": "Freelancer MIS",
+    "size": "Medium",
+    "role": [
+      "Gunship"
+    ],
+    "manufacturer": "MISC",
+    "scu": 36
+  },
+  {
+    "name": "Fury",
+    "size": "Snub",
+    "role": [
+      "Snub Fighter"
+    ],
+    "manufacturer": "MISC",
+    "scu": 0
+  },
+  {
+    "name": "Genesis Starliner",
+    "size": "Large",
+    "role": [
+      "Passenger"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 300
+  },
+  {
+    "name": "Gladiator",
+    "size": "Small",
+    "role": [
+      "Bomber"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "Gladius",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Gladius Valiant",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Glaive",
+    "size": "Medium",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Esperia",
+    "scu": 0
+  },
+  {
+    "name": "Hammerhead",
+    "size": "Large",
+    "role": [
+      "Heavy Gunship"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 40
+  },
+  {
+    "name": "Hawk",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "Herald",
+    "size": "Small",
+    "role": [
+      "Medium Data"
+    ],
+    "manufacturer": "Drake",
+    "scu": 0
+  },
+  {
+    "name": "Hull A",
+    "size": "Small",
+    "role": [
+      "Medium Freight"
+    ],
+    "manufacturer": "MISC",
+    "scu": 64
+  },
+  {
+    "name": "Hull B",
+    "size": "Medium",
+    "role": [
+      "Heavy Freight"
+    ],
+    "manufacturer": "MISC",
+    "scu": 384
+  },
+  {
+    "name": "Hull D",
+    "size": "Capital",
+    "role": [
+      "Heavy Freight"
+    ],
+    "manufacturer": "MISC",
+    "scu": 20736
+  },
+  {
+    "name": "Hull E",
+    "size": "Capital",
+    "role": [
+      "Heavy Freight"
+    ],
+    "manufacturer": "MISC",
+    "scu": 98304
+  },
+  {
+    "name": "Hurricane",
+    "size": "Small",
+    "role": [
+      "Heavy Fighter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "Idris-K",
+    "size": "Capital",
+    "role": [
+      "Frigate"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Idris-M",
+    "size": "Capital",
+    "role": [
+      "Frigate"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 831
+  },
+  {
+    "name": "Idris-P",
+    "size": "Capital",
+    "role": [
+      "Frigate"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 995
+  },
+  {
+    "name": "Javelin",
+    "size": "Capital",
+    "role": [
+      "Destroyer"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 5400
+  },
+  {
+    "name": "Khartu-Al",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Aopoa",
+    "scu": 0
+  },
+  {
+    "name": "Kraken",
+    "size": "Capital",
+    "role": [
+      "Multi-Role - Light Carrier"
+    ],
+    "manufacturer": "Drake",
+    "scu": 3792
+  },
+  {
+    "name": "Kraken Privateer",
+    "size": "Capital",
+    "role": [
+      "Multi-Role - Light Carrier"
+    ],
+    "manufacturer": "Drake",
+    "scu": 768
+  },
+  {
+    "name": "Legionnaire",
+    "size": "Small",
+    "role": [
+      "Boarding Ship"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "Liberator",
+    "size": "Large",
+    "role": [
+      "Transporter"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 400
+  },
+  {
+    "name": "M2 Hercules Starlifter",
+    "size": "Large",
+    "role": [
+      "Transport Military"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 522
+  },
+  {
+    "name": "M50",
+    "size": "Small",
+    "role": [
+      "Racing"
+    ],
+    "manufacturer": "Origin",
+    "scu": 0
+  },
+  {
+    "name": "MOLE",
+    "size": "Medium",
+    "role": [
+      "Prospecting And Mining"
+    ],
+    "manufacturer": "Argo",
+    "scu": 0
+  },
+  {
+    "name": "MPUV Cargo",
+    "size": "Snub",
+    "role": [
+      "Light Freight"
+    ],
+    "manufacturer": "Argo",
+    "scu": 2
+  },
+  {
+    "name": "MPUV Personnel",
+    "size": "Snub",
+    "role": [
+      "Passenger"
+    ],
+    "manufacturer": "Argo",
+    "scu": 0
+  },
+  {
+    "name": "Mantis",
+    "size": "Small",
+    "role": [
+      "Military",
+      "Stealth"
+    ],
+    "manufacturer": "RSI",
+    "scu": 0
+  },
+  {
+    "name": "Merchantman",
+    "size": "Capital",
+    "role": [
+      "Heavy Freight"
+    ],
+    "manufacturer": "Banu",
+    "scu": 2880
+  },
+  {
+    "name": "Mercury Star Runner",
+    "size": "Medium",
+    "role": [
+      "Medium Cargo",
+      "Medium Data"
+    ],
+    "manufacturer": "Crusader Industries",
+    "scu": 114
+  },
+  {
+    "name": "Mustang Alpha",
+    "size": "Small",
+    "role": [
+      "Cargo"
+    ],
+    "manufacturer": "Consolidated Outland",
+    "scu": 4
+  },
+  {
+    "name": "Mustang Alpha Vindicator",
+    "size": "Small",
+    "role": [
+      "Starter",
+      "Light Freight"
+    ],
+    "manufacturer": "Consolidated Outland",
+    "scu": 4
+  },
+  {
+    "name": "Mustang Beta",
+    "size": "Small",
+    "role": [
+      "Pathfinder"
+    ],
+    "manufacturer": "Consolidated Outland",
+    "scu": 0
+  },
+  {
+    "name": "Mustang Delta",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Consolidated Outland",
+    "scu": 0
+  },
+  {
+    "name": "Mustang Gamma",
+    "size": "Small",
+    "role": [
+      "Racing"
+    ],
+    "manufacturer": "Consolidated Outland",
+    "scu": 0
+  },
+  {
+    "name": "Mustang Omega",
+    "size": "Small",
+    "role": [
+      "Racing"
+    ],
+    "manufacturer": "Consolidated Outland",
+    "scu": 0
+  },
+  {
+    "name": "Nautilus",
+    "size": "Large",
+    "role": [
+      "Minelayer"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 64
+  },
+  {
+    "name": "Nautilus Solstice",
+    "size": "Large",
+    "role": [
+      "Minelayer"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 64
+  },
+  {
+    "name": "Nomad",
+    "size": "Small",
+    "role": [
+      "Light Freight"
+    ],
+    "manufacturer": "Consolidated Outland",
+    "scu": 24
+  },
+  {
+    "name": "Odyssey",
+    "size": "Large",
+    "role": [
+      "Expedition"
+    ],
+    "manufacturer": "MISC",
+    "scu": 252
+  },
+  {
+    "name": "Orion",
+    "size": "Capital",
+    "role": [
+      "Heavy Mining"
+    ],
+    "manufacturer": "RSI",
+    "scu": 384
+  },
+  {
+    "name": "P-52 Merlin",
+    "size": "Snub",
+    "role": [
+      "Snub Fighter"
+    ],
+    "manufacturer": "Kruger",
+    "scu": 0
+  },
+  {
+    "name": "P-72 Archimedes",
+    "size": "Snub",
+    "role": [
+      "Racing"
+    ],
+    "manufacturer": "Kruger",
+    "scu": 0
+  },
+  {
+    "name": "Pegasus",
+    "size": "Capital",
+    "role": [
+      "Escort Carrier"
+    ],
+    "manufacturer": "RSI",
+    "scu": 0
+  },
+  {
+    "name": "Perseus",
+    "size": "Sub-capital",
+    "role": [
+      "Gun-Boat"
+    ],
+    "manufacturer": "RSI",
+    "scu": 50
+  },
+  {
+    "name": "Pirate Gladius",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Prospector",
+    "size": "Small",
+    "role": [
+      "Prospecting And Mining"
+    ],
+    "manufacturer": "MISC",
+    "scu": 0
+  },
+  {
+    "name": "Prowler",
+    "size": "Medium",
+    "role": [
+      "Dropship"
+    ],
+    "manufacturer": "Esperia",
+    "scu": 0
+  },
+  {
+    "name": "RAFT",
+    "size": "Medium",
+    "role": [
+      "Medium Freight"
+    ],
+    "manufacturer": "Argo",
+    "scu": 0
+  },
+  {
+    "name": "Railen",
+    "size": "Medium",
+    "role": [
+      "Cargo"
+    ],
+    "manufacturer": "Gatac",
+    "scu": 320
+  },
+  {
+    "name": "Razor",
+    "size": "Small",
+    "role": [
+      "Racing"
+    ],
+    "manufacturer": "MISC",
+    "scu": 0
+  },
+  {
+    "name": "Razor EX",
+    "size": "Small",
+    "role": [
+      "Stealth"
+    ],
+    "manufacturer": "MISC",
+    "scu": 0
+  },
+  {
+    "name": "Razor LX",
+    "size": "Small",
+    "role": [
+      "Luxury"
+    ],
+    "manufacturer": "MISC",
+    "scu": 0
+  },
+  {
+    "name": "Reclaimer",
+    "size": "Large",
+    "role": [
+      "Heavy Salvage"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 180
+  },
+  {
+    "name": "Redeemer",
+    "size": "Medium",
+    "role": [
+      "Gunship"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 2
+  },
+  {
+    "name": "Reliant Kore",
+    "size": "Small",
+    "role": [
+      "Starter",
+      "Light Freight"
+    ],
+    "manufacturer": "MISC",
+    "scu": 6
+  },
+  {
+    "name": "Reliant Mako",
+    "size": "Small",
+    "role": [
+      "Reporting"
+    ],
+    "manufacturer": "MISC",
+    "scu": 0
+  },
+  {
+    "name": "Reliant Sen",
+    "size": "Small",
+    "role": [
+      "Light Science"
+    ],
+    "manufacturer": "MISC",
+    "scu": 2
+  },
+  {
+    "name": "Reliant Tana",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "MISC",
+    "scu": 1
+  },
+  {
+    "name": "Retaliator Base",
+    "size": "Large",
+    "role": [
+      "Heavy Bomber"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Retaliator Bomber",
+    "size": "Large",
+    "role": [
+      "Heavy Bomber"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "SRV",
+    "size": "Small",
+    "role": [
+      "Industrial",
+      "Civilian"
+    ],
+    "manufacturer": "Argo",
+    "scu": 10
+  },
+  {
+    "name": "Sabre",
+    "size": "Small",
+    "role": [
+      "Stealth Fighter/Medium Fighter"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Sabre Comet",
+    "size": "Small",
+    "role": [
+      "Stealth Fighter"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Sabre Firebird",
+    "size": "Small",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Sabre Raven",
+    "size": "Small",
+    "role": [
+      "Interdiction"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "San'tok.y\u0101i",
+    "size": "Medium",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Aopoa",
+    "scu": 0
+  },
+  {
+    "name": "Scorpius",
+    "size": "Small",
+    "role": [
+      "Heavy Fighter"
+    ],
+    "manufacturer": "RSI",
+    "scu": 0
+  },
+  {
+    "name": "Scorpius Antares",
+    "size": "Small",
+    "role": [
+      "Heavy Fighter"
+    ],
+    "manufacturer": "RSI",
+    "scu": 0
+  },
+  {
+    "name": "Scythe",
+    "size": "Small",
+    "role": [
+      "Medium Fighter"
+    ],
+    "manufacturer": "Esperia",
+    "scu": 0
+  },
+  {
+    "name": "Starfarer",
+    "size": "Large",
+    "role": [
+      "Heavy Refuelling"
+    ],
+    "manufacturer": "MISC",
+    "scu": 291
+  },
+  {
+    "name": "Starfarer Gemini",
+    "size": "Large",
+    "role": [
+      "Heavy Refuelling"
+    ],
+    "manufacturer": "MISC",
+    "scu": 291
+  },
+  {
+    "name": "Talon",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Esperia",
+    "scu": 0
+  },
+  {
+    "name": "Talon Shrike",
+    "size": "Small",
+    "role": [
+      "Light Fighter"
+    ],
+    "manufacturer": "Esperia",
+    "scu": 0
+  },
+  {
+    "name": "Terrapin",
+    "size": "Small",
+    "role": [
+      "Pathfinder"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 0
+  },
+  {
+    "name": "Valkyrie",
+    "size": "Small",
+    "role": [
+      "Military",
+      "Industrial"
+    ],
+    "manufacturer": "Anvil",
+    "scu": 30
+  },
+  {
+    "name": "Vanguard Harbinger",
+    "size": "Medium",
+    "role": [
+      "Bomber"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Vanguard Hoplite",
+    "size": "Medium",
+    "role": [
+      "Dropship"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Vanguard Sentinel",
+    "size": "Medium",
+    "role": [
+      "Interdiction"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Vanguard Warden",
+    "size": "Medium",
+    "role": [
+      "Heavy Fighter"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 0
+  },
+  {
+    "name": "Vulcan",
+    "size": "Medium",
+    "role": [
+      "Medium Repair",
+      "Medium Refuel"
+    ],
+    "manufacturer": "Aegis",
+    "scu": 12
+  },
+  {
+    "name": "Vulture",
+    "size": "Small",
+    "role": [
+      "Light Salvage"
+    ],
+    "manufacturer": "Drake",
+    "scu": 12
+  }
+]

@@ -32,13 +32,29 @@ model User {
 }
 
 model Ship {
-  id           Int      @id @default(autoincrement())
-  name         String   @unique
+  id           Int          @id @default(autoincrement())
+  name         String       @unique
   manufacturer String
-  role         String
+  roles        ShipToRole[]
   size         String
   scu          Int
   hangars      Hangar[]
+}
+
+model ShipRole {
+  id    Int          @id @default(autoincrement())
+  name  String       @unique
+  ships ShipToRole[]
+}
+
+model ShipToRole {
+  id     Int      @id @default(autoincrement())
+  ship   Ship     @relation(fields: [shipId], references: [id])
+  role   ShipRole @relation(fields: [roleId], references: [id])
+  shipId Int
+  roleId Int
+
+  @@unique([shipId, roleId])
 }
 
 model Hangar {
@@ -48,6 +64,8 @@ model Hangar {
   userId   Int
   shipId   Int
   quantity Int  @default(1)
+
+  @@index([userId, shipId])
 }
 
 model Role {
