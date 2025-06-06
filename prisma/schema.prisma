@@ -17,18 +17,35 @@ enum Rank {
   PARAGON
 }
 
+enum Status {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+enum SystemRole {
+  USER
+  MODERATOR
+  ADMIN
+  SUPERADMIN
+}
+
 model User {
-  id            Int        @id @default(autoincrement())
-  rsiHandle     String?    @unique
-  discordId     String     @unique
-  discordHandle String     @unique
+  id            Int            @id @default(autoincrement())
+  rsiHandle     String?        @unique
+  discordId     String         @unique
+  discordHandle String         @unique
   preferredName String?
-  rank          Rank       @default(RECRUIT)
+  rank          Rank           @default(RECRUIT)
+  application   Application[]  @relation("Applications")
+  reviews       Application[]  @relation("Reviews")
   avatar        String?
-  createdAt     DateTime   @default(now())
-  updatedAt     DateTime   @updatedAt
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
   roles         UserRole[]
   hangar        Hangar[]
+  UserDivision  UserDivision[]
+  systemRole    SystemRole     @default(USER)
 }
 
 model Ship {
@@ -82,4 +99,35 @@ model UserRole {
   roleId Int
 
   @@unique([userId, roleId])
+}
+
+model Division {
+  id           Int            @id @default(autoincrement())
+  name         String         @unique
+  description  String
+  slug         String         @unique
+  UserDivision UserDivision[]
+}
+
+model UserDivision {
+  id         Int      @id @default(autoincrement())
+  user       User     @relation(fields: [userId], references: [id])
+  division   Division @relation(fields: [divisionId], references: [id])
+  userId     Int
+  divisionId Int
+  joinedAt   DateTime @default(now())
+}
+
+model Application {
+  id           Int       @id @default(autoincrement())
+  user         User      @relation("Applications", fields: [userId], references: [id])
+  userId       Int
+  answers      Json
+  status       Status    @default(PENDING)
+  submittedAt  DateTime  @default(now())
+  reviewedAt   DateTime?
+  reviewedBy   User?     @relation("Reviews", fields: [reviewedById], references: [id])
+  reviewedById Int?
+  notes        String?
+  archived     Boolean   @default(false)
 }
