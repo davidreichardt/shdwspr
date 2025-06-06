@@ -31,21 +31,22 @@ enum SystemRole {
 }
 
 model User {
-  id            Int            @id @default(autoincrement())
-  rsiHandle     String?        @unique
-  discordId     String         @unique
-  discordHandle String         @unique
-  preferredName String?
-  rank          Rank           @default(RECRUIT)
-  application   Application[]  @relation("Applications")
-  reviews       Application[]  @relation("Reviews")
-  avatar        String?
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
-  roles         UserRole[]
-  hangar        Hangar[]
-  UserDivision  UserDivision[]
-  systemRole    SystemRole     @default(USER)
+  id                Int            @id @default(autoincrement())
+  rsiHandle         String?        @unique
+  discordId         String         @unique
+  discordHandle     String         @unique
+  showDiscordHandle Boolean        @default(false)
+  preferredName     String?
+  rank              Rank           @default(RECRUIT)
+  application       Application[]  @relation("Applications")
+  reviews           Application[]  @relation("Reviews")
+  avatar            String?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  roles             UserRole[]
+  hangar            Hangar[]
+  UserDivision      UserDivision[]
+  systemRole        SystemRole     @default(USER)
 }
 
 model Ship {
