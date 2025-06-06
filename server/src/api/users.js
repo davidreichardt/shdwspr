@@ -1,35 +1,89 @@
 const express = require('express');
-const { PrismaClient } = require('../../../generated/prisma');
 const { getAvatarUrl } = require('../utils/discord');
 
-const router = express.Router();
-const prisma = new PrismaClient();
+module.exports = (prisma) => {
+  const router = express.Router();
+  const userSelect = {
+    rsiHandle: true,
+    discordHandle: true,
+    showDiscordHandle: true,
+    avatar: true,
+    rank: true,
+    preferredName: true,
+    // fetch roles from UserRole join table
+    roles: {
+      select: {
+        role: { select: { name: true } },
+      },
+    },
+    // fetch divisions from UserDivision join table
+    divisions: {
+      select: {
+        division: { select: { name: true } },
+      },
+    },
+    // fetch ships from hangar, include specified info
+    hangar: {
+      select: {
+        quantity: true,
+        ship: {
+          select: {
+            name: true,
+            manufacturer: true,
+          },
+        },
+      },
+    },
+  };
 
-// route to create a new user in db
-// expect json body with username and discordId
-router.post('/', express.json(), async (req, res) => {
-  const { username, discordId } = req.body;
+  // format response, flatten nested objects, respect showDiscordHandle
+  const formatUser = (user) => ({
+    rsiHandle: user.rsiHandle,
+    discordHandle: user.showDiscordHandle ? user.discordHandle : null,
+    avatarUrl: getAvatarUrl(user),
+    rank: user.rank,
+    preferredName: user.preferredName,
+    roles: user.roles.map((r) => r.role.name),
+    divisions: user.divisions.map((d) => d.division.name),
+    ships: user.hangar.map((h) => ({
+      name: h.ship.name,
+      manufacturer: h.ship.manufacturer,
+      quantity: h.quantity,
+    })),
+  });
 
-  try {
-    // create a new user record in db
-    const newUser = await prisma.user.create({
-      data: { username, discordId },
-    });
+  // GET /api/users - public list of users
+  router.get('/', async (req, res) => {
+    try {
+      const users = await prisma.user.findMany({ select: userSelect });
 
-    const avatarUrl = getAvatarUrl(newUser);
+      res.json(users.map(formatUser));
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to fetch users' });
+    }
+  });
 
-    const resUser = {
-      ...newUser,
-      avatarUrl,
-      createdAt: newUser.createdAt.toISOString(),
-    };
+  // GET /api/users/:id - return public profile of specific user
+  router.get('/:id', async (req, res) => {
+    const userId = parseInt(req.params.id, 10);
 
-    // respond with
-    res.status(201).json(resUser);
-  } catch (error) {
-    // on error repsond with
-    res.status(400).json({ error: error.message });
-  }
-});
+    try {
+      const user = await prisma.user.findUnique({
+        where: { id: userId },
+        select: userSelect,
+      });
 
-module.exports = router;
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+
+      res.json(formatUser(user));
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to fetch user profile' });
+    }
+  });
+
+  return router;
+};
