@@ -17,10 +17,11 @@ enum Rank {
   PARAGON
 }
 
-enum Status {
+enum ApplicationStatus {
   PENDING
   ACCEPTED
   REJECTED
+  CANCELLED
 }
 
 enum SystemRole {
@@ -28,6 +29,12 @@ enum SystemRole {
   MODERATOR
   ADMIN
   SUPERADMIN
+}
+
+enum ApplicationType {
+  JOIN_ORG
+  RANK_UP
+  JOIN_DIVISION
 }
 
 model User {
@@ -47,6 +54,7 @@ model User {
   hangar            Hangar[]
   UserDivision      UserDivision[]
   systemRole        SystemRole     @default(USER)
+  isMember          Boolean        @default(false)
 }
 
 model Ship {
@@ -122,15 +130,16 @@ model UserDivision {
 }
 
 model Application {
-  id           Int       @id @default(autoincrement())
-  user         User      @relation("Applications", fields: [userId], references: [id])
+  id           Int               @id @default(autoincrement())
+  user         User              @relation("Applications", fields: [userId], references: [id])
   userId       Int
-  answers      Json
-  status       Status    @default(PENDING)
-  submittedAt  DateTime  @default(now())
+  type         ApplicationType
+  data         Json
+  status       ApplicationStatus @default(PENDING)
+  submittedAt  DateTime          @default(now())
   reviewedAt   DateTime?
-  reviewedBy   User?     @relation("Reviews", fields: [reviewedById], references: [id])
+  reviewedBy   User?             @relation("Reviews", fields: [reviewedById], references: [id])
   reviewedById Int?
   notes        String?
-  archived     Boolean   @default(false)
+  archived     Boolean           @default(false)
 }
