@@ -116,6 +116,8 @@ model UserDivision {
   userId     Int
   divisionId Int
   joinedAt   DateTime @default(now())
+
+  @@unique([userId, divisionId])
 }
 
 model Application {
