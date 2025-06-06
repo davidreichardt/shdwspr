@@ -27,13 +27,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // import and mount routes
-const usersRouter = require('./routes/users');
-const authRouter = require('./routes/auth');
-const dashboardRouter = require('./routes/dashboard');
+const usersRouter = require('./api/users');
+const authRouter = require('./api/auth');
+const dashboardRouter = require('./api/dashboard');
 
-app.use('/users', isAuthenticated, usersRouter);
-app.use('/auth', authRouter);
-app.use('/dashboard', isAuthenticated, dashboardRouter);
+app.use('/api/users', isAuthenticated, usersRouter);
+app.use('/api//auth', authRouter);
+app.use('/api/dashboard', isAuthenticated, dashboardRouter);
 
 app.get('/', (req, res) => {
   console.log('User authenticated:', req.isAuthenticated && req.isAuthenticated());
