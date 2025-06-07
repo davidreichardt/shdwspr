@@ -3,7 +3,9 @@ const session = require('express-session');
 const passport = require('passport');
 const setupPassport = require('./config/passport');
 const isAuthenticated = require('./middleware/isAuthenticated');
+const { PrismaClient } = require('../../generated/prisma');
 
+const prisma = new PrismaClient();
 const app = express();
 
 // middleware to parse JSON
@@ -27,21 +29,26 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // import and mount routes
-const usersRouter = require('./api/users');
+const usersRouter = require('./api/users')(prisma);
 const authRouter = require('./api/auth');
-const dashboardRouter = require('./api/dashboard');
+const dashboardRouter = require('./api/dashboard')(prisma);
+const hangarRouter = require('./api/hangar')(prisma);
+const rolesRouter = require('./api/roles')(prisma);
+const shipsRouter = require('./api/ships')(prisma);
+const applicationsRouter = require('./api/applications')(prisma);
 
-app.use('/api/users', isAuthenticated, usersRouter);
-app.use('/api//auth', authRouter);
-app.use('/api/dashboard', isAuthenticated, dashboardRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/dashboard', dashboardRouter);
+app.use('/api/hangar', hangarRouter);
+app.use('/api/roles', rolesRouter);
+app.use('/api/ships', shipsRouter);
+app.use('/api/applications', applicationsRouter);
 
 app.get('/', (req, res) => {
-  console.log('User authenticated:', req.isAuthenticated && req.isAuthenticated());
-  res.send(
-    req.isAuthenticated && req.isAuthenticated()
-      ? 'Welcome to SHDWSPR. You are logged in.'
-      : 'Welcome to SHDWSPR. Please log in.'
-  );
+  const loggedIn = req.isAuthenticated && req.isAuthenticated();
+  console.log(`User authenticated: ${loggedIn}`);
+  res.send(loggedIn ? 'You are logged in' : 'Please log in');
 });
 
 module.exports = app;

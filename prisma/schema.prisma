@@ -91,13 +91,16 @@ model Hangar {
   shipId   Int
   quantity Int  @default(1)
 
+  @@unique([userId, shipId])
   @@index([userId, shipId])
 }
 
 model Role {
-  id        Int        @id @default(autoincrement())
-  name      String     @unique
-  userRoles UserRole[]
+  id          Int        @id @default(autoincrement())
+  name        String     @unique
+  description String?
+  isPublic    Boolean    @default(true)
+  userRoles   UserRole[]
 }
 
 model UserRole {
