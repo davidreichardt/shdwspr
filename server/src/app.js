@@ -36,6 +36,7 @@ const hangarRouter = require('./api/hangar')(prisma);
 const rolesRouter = require('./api/roles')(prisma);
 const shipsRouter = require('./api/ships')(prisma);
 const applicationsRouter = require('./api/applications')(prisma);
+const adminRouter = require('./api/admin')(prisma);
 
 app.use('/api/users', usersRouter);
 app.use('/api/auth', authRouter);
@@ -44,6 +45,8 @@ app.use('/api/hangar', hangarRouter);
 app.use('/api/roles', rolesRouter);
 app.use('/api/ships', shipsRouter);
 app.use('/api/applications', applicationsRouter);
+app.use('/api/admin', adminRouter);
+
 
 app.get('/', (req, res) => {
   const loggedIn = req.isAuthenticated && req.isAuthenticated();

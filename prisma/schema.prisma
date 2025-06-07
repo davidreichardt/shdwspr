@@ -26,7 +26,6 @@ enum ApplicationStatus {
 
 enum SystemRole {
   USER
-  MODERATOR
   ADMIN
   SUPERADMIN
 }
