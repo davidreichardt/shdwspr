@@ -65,6 +65,10 @@ module.exports = (prisma) => {
   router.get('/:id', async (req, res) => {
     const userId = parseInt(req.params.id, 10);
 
+    if (Number.isNaN(userId) || userId < 1) {
+      return res.status(400).json({ error: 'Invalid user ID' });
+    }
+
     try {
       const user = await prisma.user.findUnique({
         where: { id: userId },

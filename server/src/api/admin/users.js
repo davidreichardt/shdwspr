@@ -17,6 +17,10 @@ module.exports = (prisma) => {
       const userId = parseInt(req.params.id, 10);
       const { systemRole } = req.body;
 
+      if (Number.isNaN(userId) || userId < 1) {
+        res.status(400).json({ error: 'Invalid user ID' });
+      }
+
       if (!['USER', 'ADMIN', 'SUPERADMIN'].includes(systemRole)) {
         return res.status(400).json({ error: 'Invalid systemRole value' });
       }
@@ -38,6 +42,10 @@ module.exports = (prisma) => {
   // GET /api/admin/users/:id - return full user object with all related data
   router.get('/:id', isAuthenticated, requireAdmin, async (req, res) => {
     const userId = parseInt(req.params.id, 10);
+
+    if (Number.isNaN(userId) || userId < 1) {
+      res.status(400).json({ error: 'Invalid user ID' });
+    }
 
     try {
       const user = await prisma.user.findUnique({

@@ -43,6 +43,10 @@ module.exports = (prisma) => {
       const applicationId = parseInt(req.params.id, 10);
       const { status, notes } = req.body;
 
+      if (Number.isNaN(userId) || userId < 1) {
+        res.status(400).json({ error: 'Invalid user ID' });
+      }
+
       if (!['ACCEPTED', 'REJECTED', 'CANCELLED'].includes(status)) {
         return res.status(400).json({ error: 'Invalid status' });
       }
