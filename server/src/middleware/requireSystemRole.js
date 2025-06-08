@@ -10,7 +10,7 @@ const requireSystemRole = (minLevel) => {
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    const userRole = req.user?.SystemRole;
+    const userRole = req.user?.systemRole;
     const userLevel = roleLevels[userRole];
 
     if (userLevel === undefined || userLevel < minLevel) {

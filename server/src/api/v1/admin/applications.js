@@ -1,5 +1,5 @@
 const express = require('express');
-const { sanitizeInput } = require('../../utils/sanitizeInput');
+const { sanitizeInput } = require('../../../utils/sanitizeInput');
 const isAuthenticated = require('../../../middleware/isAuthenticated');
 const requireSystemRole = require('../../../middleware/requireSystemRole');
 
@@ -9,7 +9,7 @@ module.exports = (prisma) => {
 
   // GET /api/admin/appication - get all unarchived applications
   router.get(
-    '/applications',
+    '/',
     isAuthenticated,
     requireAdmin,
     async (req, res) => {
@@ -37,7 +37,7 @@ module.exports = (prisma) => {
 
   // PATCH - /api/admin/applications/:id - approve or reject applications
   router.patch(
-    '/applications/:id',
+    '/:id',
     isAuthenticated,
     requireAdmin,
     async (req, res) => {
