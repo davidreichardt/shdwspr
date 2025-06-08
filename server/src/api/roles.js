@@ -34,6 +34,14 @@ module.exports = (prisma) => {
     }
 
     try {
+      const existing = await prisma.userRole.findFirst({
+        where: { userId, roleId },
+      });
+
+      if (existing) {
+        res.status(409).json({ error: 'User already has this role' });
+      }
+
       await prisma.userRole.create({
         data: { userId, roleId },
       });
@@ -54,7 +62,19 @@ module.exports = (prisma) => {
       const userId = req.user.id;
       const roleId = parseInt(req.params.roleId, 10);
 
+      if (isNaN(roleId)) {
+        res.status(400).json({ error: 'Invalid roleId' });
+      }
+
       try {
+        const existing = await prisma.userRole.findUnique({
+          where: { userId_roleId: { userId, roleId } },
+        });
+
+        if (!existing) {
+          res.status(404).json({ error: 'Role not assigned to user' });
+        }
+
         await prisma.userRole.delete({
           where: {
             userId_roleId: { userId, roleId },

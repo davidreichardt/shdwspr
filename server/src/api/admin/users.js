@@ -29,6 +29,10 @@ module.exports = (prisma) => {
         return res.status(400).json({ error: 'Invalid systemRole value' });
       }
 
+      if (userId === req.user.id) {
+        res.status(403).json({ error: 'Cannot change your own system role' });
+      }
+
       try {
         const updatedUser = await prisma.user.update({
           where: { id: userId },
