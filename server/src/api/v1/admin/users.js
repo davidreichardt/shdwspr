@@ -1,6 +1,6 @@
 const express = require('express');
-const isAuthenticated = require('../../middleware/isAuthenticated');
-const requireSystemRole = require('../../middleware/requireSystemRole');
+const isAuthenticated = require('../../../middleware/isAuthenticated');
+const requireSystemRole = require('../../../middleware/requireSystemRole');
 
 module.exports = (prisma) => {
   const router = express.Router();

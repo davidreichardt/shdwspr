@@ -1,6 +1,6 @@
 const express = require('express');
-const { getAvatarUrl } = require('../utils/discord');
-const isAuthenticated = require('../middleware/isAuthenticated');
+const { getAvatarUrl } = require('../../../utils/discord');
+const isAuthenticated = require('../../../middleware/isAuthenticated');
 
 module.exports = (prisma) => {
   const router = express.Router();

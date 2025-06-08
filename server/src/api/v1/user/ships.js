@@ -1,5 +1,5 @@
 const express = require('express');
-const isAuthenticated = require('../middleware/isAuthenticated');
+const isAuthenticated = require('../../../middleware/isAuthenticated');
 
 module.exports = (prisma) => {
   const router = express.Router();

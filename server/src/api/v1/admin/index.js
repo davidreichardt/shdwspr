@@ -1,5 +1,5 @@
 const express = require('express');
-const requireSystemRole = require('../../middleware/requireSystemRole');
+const requireSystemRole = require('../../../middleware/requireSystemRole');
 
 module.exports = (prisma) => {
   const router = express.Router();
@@ -14,4 +14,4 @@ module.exports = (prisma) => {
   router.use('/divisions', require('./divisions')(prisma));
 
   return router;
-}
+};

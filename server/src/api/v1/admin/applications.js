@@ -1,6 +1,7 @@
 const express = require('express');
-const isAuthenticated = require('../../middleware/isAuthenticated');
-const requireSystemRole = require('../../middleware/requireSystemRole');
+const { sanitizeInput } = require('../../utils/sanitizeInput');
+const isAuthenticated = require('../../../middleware/isAuthenticated');
+const requireSystemRole = require('../../../middleware/requireSystemRole');
 
 module.exports = (prisma) => {
   const router = express.Router();
@@ -41,14 +42,26 @@ module.exports = (prisma) => {
     requireAdmin,
     async (req, res) => {
       const applicationId = parseInt(req.params.id, 10);
-      const { status, notes } = req.body;
+      let { status, notes } = req.body;
 
-      if (Number.isNaN(userId) || userId < 1) {
-        res.status(400).json({ error: 'Invalid user ID' });
+      if (Number.isNaN(applicationId) || applicationId < 1) {
+        return res.status(400).json({ error: 'Invalid application ID' });
       }
 
       if (!['ACCEPTED', 'REJECTED', 'CANCELLED'].includes(status)) {
         return res.status(400).json({ error: 'Invalid status' });
+      }
+
+      if (typeof notes === 'string') {
+        notes = sanitizeInput(notes);
+
+        if (notes.length > 250) {
+          return res
+            .status(400)
+            .json({ error: 'Notes too long (max 250 characters' });
+        }
+      } else {
+        notes = null;
       }
 
       try {
@@ -56,10 +69,6 @@ module.exports = (prisma) => {
           where: { id: applicationId },
           include: { user: true },
         });
-
-        if (application.userId !== application.user.id) {
-          return res.status(500).json({ error: 'Data integrity error: user mismatch' });
-        }
 
         if (!application) {
           return res.status(404).json({ error: 'Application not found' });
@@ -103,14 +112,25 @@ module.exports = (prisma) => {
           }
 
           if (type === 'JOIN_DIVISION' && application.data?.divisionId) {
-            updates.push(
-              prisma.userDivision.create({
-                data: {
+            const existing = await prisma.userDivision.findUnique({
+              where: {
+                userId_divisionId: {
                   userId,
                   divisionId: application.data.divisionId,
                 },
-              })
-            );
+              },
+            });
+
+            if (!existing) {
+              updates.push(
+                prisma.userDivision.create({
+                  data: {
+                    userId,
+                    divisionId: application.data.divisionId,
+                  },
+                })
+              );
+            }
           }
         }
 
