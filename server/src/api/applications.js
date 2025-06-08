@@ -18,7 +18,7 @@ module.exports = (prisma) => {
         data: {
           userId,
           type,
-          target,
+          data: target,
           notes: notes?.trim() || '',
           status: 'PENDING',
         },
@@ -38,7 +38,7 @@ module.exports = (prisma) => {
     try {
       const applications = await prisma.application.findMany({
         where: { userId },
-        orderBy: { createdAt: 'desc' },
+        orderBy: { submittedAt: 'desc' },
       });
 
       res.json(applications);
