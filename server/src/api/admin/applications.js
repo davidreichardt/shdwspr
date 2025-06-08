@@ -58,7 +58,7 @@ module.exports = (prisma) => {
         });
 
         if (application.userId !== application.user.id) {
-          return res.status(500).json({ 'Data integrity error: user mismatch' });
+          return res.status(500).json({ error: 'Data integrity error: user mismatch' });
         }
 
         if (!application) {
