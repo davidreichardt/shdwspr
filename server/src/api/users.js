@@ -91,8 +91,9 @@ module.exports = (prisma) => {
     const userId = req.user.id;
     const { preferredName } = req.body;
 
-    if (typeof preferredName !== 'string' || preferredName.trim() === '') {
-      return res.status(400).json({ error: 'Invalid preferred name' });
+    const updatedName = preferredName.trim();
+    if (typeof updatedName !== 'string' || updatedName.length === 0 || updatedName.length > 15) {
+      return res.status(400).json({ error: 'Preferred name must be 1-15 characters' });
     }
 
     try {
