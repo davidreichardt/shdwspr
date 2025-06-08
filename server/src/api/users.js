@@ -40,9 +40,9 @@ module.exports = (prisma) => {
     avatarUrl: getAvatarUrl(user),
     rank: user.rank,
     preferredName: user.preferredName,
-    roles: user.roles.map((r) => r.role.name),
-    divisions: user.divisions.map((d) => d.division.name),
-    ships: user.hangar.map((h) => ({
+    roles: (user.roles || []).map((r) => r.role.name),
+    divisions: (user.divisions || []).map((d) => d.division.name),
+    ships: (user.hangar || []).map((h) => ({
       name: h.ship.name,
       manufacturer: h.ship.manufacturer,
       quantity: h.quantity,
