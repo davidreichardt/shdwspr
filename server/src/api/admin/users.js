@@ -58,6 +58,31 @@ module.exports = (prisma) => {
     try {
       const user = await prisma.user.findUnique({
         where: { id: userId },
+        include: {
+          roles: {
+            select: { role: true },
+          },
+          divisions: {
+            select: { division: true },
+          },
+          hangar: {
+            select: {
+              quantity: true,
+              ship: {
+                select: {
+                  name: true,
+                  manufacturer: true,
+                },
+              },
+            },
+          },
+          submittedApplications: {
+            orderBy: { submittedAt: 'desc' },
+          },
+          reviewedApplications: {
+            orderBy: { reviewedAt: 'desc' },
+          },
+        },
       });
 
       if (!user) {
