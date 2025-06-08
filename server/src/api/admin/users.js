@@ -21,7 +21,11 @@ module.exports = (prisma) => {
         res.status(400).json({ error: 'Invalid user ID' });
       }
 
-      if (!['USER', 'ADMIN', 'SUPERADMIN'].includes(systemRole)) {
+      const allowedRoles = ['USER', 'ADMIN', 'SUPERADMIN'];
+      if (
+        typeof systemRole !== 'string' ||
+        !allowedRoles.includes(systemRole)
+      ) {
         return res.status(400).json({ error: 'Invalid systemRole value' });
       }
 
@@ -31,7 +35,11 @@ module.exports = (prisma) => {
           data: { systemRole },
         });
 
-        res.json({ success: true, id: updatedUser.id, systemRole: updatedUser.systemRole });
+        res.json({
+          success: true,
+          id: updatedUser.id,
+          systemRole: updatedUser.systemRole,
+        });
       } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Failed to update system role' });
