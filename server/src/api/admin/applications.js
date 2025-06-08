@@ -57,6 +57,10 @@ module.exports = (prisma) => {
           include: { user: true },
         });
 
+        if (application.userId !== application.user.id) {
+          return res.status(500).json({ 'Data integrity error: user mismatch' });
+        }
+
         if (!application) {
           return res.status(404).json({ error: 'Application not found' });
         }
